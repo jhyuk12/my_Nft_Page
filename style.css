@@ -3,11 +3,28 @@
   src: url('./assets/fonts/DS-DIGI.TTF');
 }
 
+@font-face {
+  font-family: 'BMEuljirooraeorae';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/BMEuljirooraeorae.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-dnf {
+  font-family: 'BMEuljirooraeorae';
+}
+
 .font-digi {
   font-family: 'DS-DIGI';
 }
 body {
   margin: 0;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
 }
 
 video {
@@ -32,4 +49,33 @@ header {
   justify-content: space-between;
   padding: 16px;
   font-size: 32px;
+}
+
+.new-quotes {
+  display: none;
+}
+
+.new-quotes > button {
+  background-color: darkred;
+  padding: 8px 16px;
+  margin-left: 8px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.new-quotes-input {
+  border: 4px dashed darkred;
+  padding: 4px 8px;
+  font-size: 20px;
+}
+
+.new-quotes-input:focus {
+  outline: 2px solid hotpink;
+}
+
+.quotes {
+  font-size: 120px;
+  color: rgb(236, 8, 54);
+  font-weight: 3000;
+  font-style: italic;
 }
