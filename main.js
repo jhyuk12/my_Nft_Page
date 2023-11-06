@@ -27,6 +27,7 @@ function getTime() {
 
 getTime();
 setInterval(getTime, 1000);
+
 const QUOTES_LIST = 'quotesList';
 
 function getQuotes() {
@@ -78,3 +79,19 @@ function onClickQuotes() {
   quotes.style.display = 'none';
   newQuotes.style.display = 'block';
 }
+
+async function getNft() {
+  const nftImg = document.querySelector('.nft-img');
+  const nftName = document.querySelector('.nft-name');
+  const nftDesc = document.querySelector('.nft-desc');
+
+  const response = await axios.get(
+    'https://olbm.mypinata.cloud/ipfs/QmSJypFq2Z21eW5yyvHcLf3jdjEQV6mbgzbBdEZh5dVWBS'
+  );
+
+  nftImg.src = response.data.image;
+  nftName.innerText = response.data.name;
+  nftDesc.innerText = response.data.description;
+}
+
+getNft();
